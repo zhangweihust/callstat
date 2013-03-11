@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/callCheck_title"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/top_border"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/details_rl"
+			style="@style/TitleStyle"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/title_selector" >
+
+			<TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_go_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/details_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/calldetails_title_string"
+            android:textColor="#FFFFFE"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 通话 -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/set_leb_bar"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_string1"
+                    android:textColor="@color/setting_text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- 本月已用话费 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_used_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_string0"
+                    android:textColor="#4F6486"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/details_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/details_used_string"
+                    android:text="78"
+                    android:textColor="@color/callsremain_nomal_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/details_used_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/details_used"
+                    android:text="@string/calldetails_callsunit"
+                    android:textColor="#5379B9"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <!-- 包月通话 -->
+
+            <RelativeLayout
+                android:id="@+id/details_calltime_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/new_biglist_selector"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="8dp" >
+
+                    <com.archermind.callstat.home.views.MyProgressBar
+                        android:id="@+id/calltime_pbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="2dp"
+                        android:max="100"
+                        android:padding="0dp"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_custom_bg" />
+
+                    <Button
+                        android:id="@+id/callsdetails_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/arrow_right" />
+
+                    <TextView
+                        android:id="@+id/total_callTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="500分钟"
+                        android:textColor="#5379B9"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_callTime_string"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/total_callTime"
+                        android:text="@string/trafficmanager_budget_string"
+                        android:textColor="#4F6486"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" >
+
+                    <TextView
+                        android:id="@+id/details_native_calltime_string"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/calldetails_nativecall_string"
+                        android:textColor="#4f6486"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_native_calltime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/details_native_calltime_string"
+                        android:text=""
+                        android:textColor="#5D81BD"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_native_used_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/calldetails_callsunit"
+                        android:textColor="#5379B9"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_native_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/details_native_used_unit"
+                        android:text=""
+                        android:textColor="@color/callsremain_nomal_color"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- 长途通话 -->
+
+            <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_distance_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_distancecall_string"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_distance_callout_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/details_distance_string"
+                    android:text=""
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_distance_used_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/calldetails_callsunit"
+                    android:textColor="#5379B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_distance_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/details_distance_used_unit"
+                    android:text=""
+                    android:textColor="@color/callsremain_nomal_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <!-- 漫游通话 -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_roam_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_roamcall_string"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_roam_callout_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/details_roam_string"
+                    android:text=""
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_roam_used_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/calldetails_callsunit"
+                    android:textColor="#5379B9"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_roam_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/details_roam_used_unit"
+                    android:text=""
+                    android:textColor="@color/callsremain_nomal_color"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+           
+            <!-- 短信 -->
+
+            <RelativeLayout
+                android:id="@+id/details_sms_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/new_biglist_selector"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="8dp" >
+
+                    <com.archermind.callstat.home.views.MyProgressBar
+                        android:id="@+id/sms_pbar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="165dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="2dp"
+                        android:max="100"
+                        android:padding="0dp"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_custom_bg" />
+
+                    <Button
+                        android:id="@+id/sms_right_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/arrow_right" />
+
+                    <TextView
+                        android:id="@+id/total_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="500分钟"
+                        android:textColor="#5379B9"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/total_sms_string"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/total_sms"
+                        android:text="@string/trafficmanager_budget_string"
+                        android:textColor="#4F6486"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" >
+
+                    <TextView
+                        android:id="@+id/details_sms_string"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/calldetails_sms_string"
+                        android:textColor="#4f6486"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_sms_send_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/details_sms_string"
+                        android:text=""
+                        android:textColor="#5D81BD"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_sms_used_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:text="@string/calldetails_callsunit"
+                        android:textColor="#5379B9"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_sms_used"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/details_sms_used_unit"
+                        android:text=""
+                        android:textColor="@color/callsremain_nomal_color"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/details_rent_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_rent_string"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_rent_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:text="未取值"
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+                
+                 <TextView
+                    android:id="@+id/details_rent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/details_rent_unit"
+                    android:text=""
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+                
+            </RelativeLayout>
+
+            <!-- 误差 -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/set_leb_bar"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/calldetails_string3"
+                    android:textColor="@color/setting_text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_lastCheck_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/lastcheck_str"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_lastCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/details_lastCheck_string"
+                    android:text="92元"
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_lastGuess_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/lastguess_str"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_guess"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/details_lastGuess_string"
+                    android:text="88元"
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_error_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/error_str"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/details_error_sent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/details_error_string"
+                    android:text="4元"
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            
+           <!-- 对账时间 -->
+           <RelativeLayout
+                android:id="@+id/hand_input_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/new_biglist_selector"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/details_error_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/account_time_str"
+                    android:textColor="#4f6486"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/check_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/details_error_string"
+                    android:textColor="#5379b9"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

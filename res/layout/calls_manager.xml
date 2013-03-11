@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chartview="http://schemas.android.com/apk/res/com.archermind.callstat.home.views"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 话费管家标题 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_border"
+        android:orientation="horizontal"
+        android:padding="0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/callsmanager_title_string"
+            android:textColor="#FFFFFE"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/calls_settingBtn_layout"
+            android:layout_width="43dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/listview_selector"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/calls_settingBtn_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/setting_selector" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:layout_toLeftOf="@+id/calls_settingBtn_layout"
+            android:background="@drawable/top_verticalbar" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#E4E9F2"
+        android:fadingEdge="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="237dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <!-- 环形进度仪表 -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circlepbar_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/progress_bg_gray" />
+
+                    <com.archermind.callstat.home.views.ArcBar
+                        android:id="@+id/myprogressbar"
+                        android:layout_width="173dp"
+                        android:layout_height="173dp"
+                        android:layout_centerInParent="true" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circlepbar_top_bg" >
+
+                        <RelativeLayout
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_centerInParent="true" >
+
+                            <TextView
+                                android:id="@+id/callsmanager_remain_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/callsmanager_remain"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="5dp"
+                                android:text="@string/callsmanager_remain_string"
+                                android:textColor="#5B7EB8"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <ProgressBar
+                                android:id="@+id/mProgressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="6dp"
+                                android:indeterminateDrawable="@drawable/loading_spinner" >
+                            </ProgressBar>
+
+                            <TextView
+                                android:id="@+id/callsmanager_remain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_centerInParent="true"
+                                android:text="100"
+                                android:textColor="#40931B"
+                                android:textSize="23sp" />
+
+                            <Button
+                                android:id="@+id/callsmanager_checkbtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/calls_check_selector" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <!-- 已用 -->
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/image_icon01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/gary" />
+
+                        <TextView
+                            android:id="@+id/textview01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/image_icon01"
+                            android:text="@string/callsmanager_used_string"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/calls_budget_used"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/textview01"
+                            android:text="45.54元"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                    <!-- 预算 -->
+
+                    <RelativeLayout
+                        android:id="@+id/budget_setting_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/calls_icon_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/green" />
+
+                        <TextView
+                            android:id="@+id/calls_string_change"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/calls_icon_change"
+                            android:text="@string/callsmanager_budget_string"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/calls_budget_remain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/calls_string_change"
+                            android:text="112元"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                   
+                        <!-- 超出 -->
+
+                    <RelativeLayout
+                        android:id="@+id/beyond_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:visibility="gone" >
+
+                        <ImageView
+                            android:id="@+id/calls_icon_beyond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/red" />
+
+                        <TextView
+                            android:id="@+id/calls_string_beyond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/calls_icon_beyond"
+                            android:text="@string/callsmanager_budgetout_string"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/calls_budget_beyond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:layout_toRightOf="@+id/calls_string_beyond"
+                            android:text="112元"
+                            android:textColor="#4F6486"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 话费详单 -->
+
+            <RelativeLayout
+                android:id="@+id/calls_details_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/details_imageBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/details"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:padding="0dp" />
+
+                <TextView
+                    android:id="@+id/arrow_rightBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/arrow_right"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/callsmanager_used_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/callsmanager_used_info"
+                        android:textColor="#4f6486"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/the_day_of_month_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text=""
+                        android:textColor="#4f6486"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/the_day_of_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/the_day_of_month_title"
+                        android:text=""
+                        android:textColor="#4f6486"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/the_day_of_spent_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_toRightOf="@+id/the_day_of_month_title"
+                        android:textColor="#4f6486"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/the_day_of_spent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:layout_toRightOf="@+id/the_day_of_spent_title"
+                        android:textColor="#4f6486"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/chartView_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <!--
+                    <com.archermind.callstat.home.views.ChartView
+                    android:id="@+id/chartArea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                     />
+                    -->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

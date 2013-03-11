@@ -1,0 +1,37 @@
+手机端向服务器发送数据，本项目现用以下方式：
+需要用到的类：
+MyhttpPostHelper //我封装的
+HttpPost //apache组织的
+HttpResponse //apache组织的
+
+usecase：
+
+对账失败发送信息到服务器：
+首先需要把待发送的数据封装
+imei 123456789123
+province  湖北
+city 武汉
+operator 移动
+brand 动感地带
+message 您是否想查询XXX，请按照以下指示操作：1.XX2.XX
+
+String url = "10.51.15.33";
+Map<String,String> map = new HashMap<String,String>();
+map.put(imei,"123456789123");
+map.put(province,"湖北");
+...
+
+HttpPost myRequest = MyhttpPostHelper.getHttpPost(url);
+UrlEncodedFormEntity myEntity = MyHttpPostHelper.buildUrlEncodedFormEntity(map,null);
+myRequest.setEntity(myEntity);
+DefaultHttpClient myDefaultHttpClient = MyhttpPostHelper.getDefaultHttpClient();
+HttpResponse myResponse = myDefaultHttpClient.execute(myRequest);
+
+到此就发送数据到服务器了，如果想判断是否发送成功，则进行以下操作。
+int status = myResponse.getStatusLine().getStatusCode();
+if (status == 200)
+{
+	//发送成功
+}
+
+注意：以上从封装数据到发送成功，整个过程需要在异步线程里处理，否则会引起阻塞。

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/RLayout2"
+        android:background="@color/maininfo_color"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_border"
+            android:padding="0dp" >
+
+            <RelativeLayout
+                android:id="@+id/back_rl"
+			    android:layout_width="53dp"
+                android:layout_height="43dp"
+                android:background="@drawable/title_selector" >
+
+             <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_go_back" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/back_rl"
+                android:background="@drawable/top_verticalbar"
+                android:padding="0dp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/feestitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="流量排行"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/trafficrank_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg_gray"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/text_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/wave_line"
+                android:background="@color/main_bg" >
+
+                <!--
+                <TextView
+                    android:id="@+id/tv_target_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="2dp"
+                    android:text="可联网程序数：36"
+                    android:textColor="@color/setting_text"
+                    android:textSize="16sp" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_rejected_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_target_apps"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:text="已禁止：0"
+                    android:textColor="@color/setting_text"
+                    android:textSize="16sp" >
+                </TextView>
+                -->
+
+                <LinearLayout
+                    android:id="@+id/freq_tv"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    
+                    android:background="@drawable/choose_selector"
+                    
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:id="@+id/which_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:focusable="true"
+                        android:text="昨日2G/3G流量（789.99K）"
+                        android:textColor="@color/setting_text"
+                        android:singleLine="true"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/freq_tv"
+                    android:gravity="right|center_vertical" >
+
+                    <Button
+                        android:id="@+id/g2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/button_9" />
+
+                    <Button
+                        android:id="@+id/wifi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/g2"
+                        android:background="@drawable/button_15" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            
+                <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/wave_line"
+                android:background="@drawable/new_deep" >
+
+
+                <LinearLayout
+                    android:id="@+id/freq_tv1"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:focusable="true"
+                        android:text="选择需要禁用的联网程序"
+                        android:textColor="@color/setting_text"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toRightOf="@id/freq_tv1"
+                    android:gravity="right|center_vertical" >
+
+                    <TextView
+                        android:id="@+id/deny_gprs"
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="15sp"
+                        android:textColor="@color/setting_text"
+                        android:text="" 
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/deny_wifi"
+                        android:layout_width="28dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/deny_gprs"
+                        android:textSize="15sp"
+                        android:textColor="@color/setting_text"
+                        android:text="" 
+                        android:gravity="center"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/trafficrank_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_gray"
+                android:cacheColorHint="#00000000"
+                android:drawSelectorOnTop="false"
+                android:fadingEdge="none"
+                android:fastScrollEnabled="true"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/RLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/firewall_bottom_bg"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <ImageView
+            android:id="@+id/firewall_on_off_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/buttom_wz" />
+
+        <RelativeLayout
+            android:id="@+id/firewall_slider_rl"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/firewall_all_off" >
+
+            <ImageView
+                android:id="@+id/firewall_slider_img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/firewall_slider_btn" />
+
+            <ImageView
+                android:id="@+id/firewall_slider_img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/firewall_slider_btn"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources> 
+ 
+    <declare-styleable name="RoundProgressBar">  
+        <attr name="max" format="integer"/>	
+        <attr name="fill" format="boolean"/>			<!-- 是否填充圆形区域 -->
+        <attr name="Paint_Width" format="integer"/>		<!-- 画笔宽度，填充模式下无效，会被重置为0 -->
+        <attr name="Paint_Color" format="integer"/>		<!-- 画笔颜色 -->
+        <attr name="Background_Color" format="integer"/> <!-- 背景颜色 -->
+        <attr name="Show_Bottom" format="boolean"/>		<!-- 是否显示底色 -->
+        <attr name="Inside_Interval" format="integer"/> <!-- 圆形区域向里缩进的距离 --> 
+    </declare-styleable>  
+    
+    <declare-styleable name="Workspace">
+        <!-- The first screen the workspace should display. -->
+        <attr name="defaultScreen" format="integer"  />
+    </declare-styleable>
+    <declare-styleable name="FloatNaviBar">
+		<attr name="slider" format="reference" />
+		<!-- Drawable used to draw the left part of the strip underneath the tabs. -->
+		<attr name="tabLeft" format="reference" />
+		<!-- Drawable used to draw the right part of the strip underneath the tabs. -->
+		<attr name="tabRight" format="reference" />
+		<!-- Integer used to set the tabs count display to screen. -->
+		<attr name="tabCount" format="integer" />
+		<!-- Determines whether the tab arrow display or hide. -->
+		<attr name="tabArrowEnabled" format="boolean" />
+	</declare-styleable>
+	<declare-styleable name="Chart">  
+        <attr name="first_x" format="integer"/>	        <!-- 第一个坐标的位置 -->
+        <attr name="Chart_Width" format="integer"/>		<!-- 圆柱的宽度 -->
+        <attr name="C_Height" format="integer"/>		<!-- 圆柱的高度 -->
+        <attr name="between_interval" format="integer"/>		<!-- 圆柱间的间隔 -->
+    </declare-styleable>  
+</resources> 
+

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_bj2"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/popup_tetle_bj"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/manual_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="校正未成功"
+            android:textColor="@color/setting_text_black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="277dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/set_biglist_bar"
+        android:focusable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/manual_calls_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="话费余额"
+            android:textColor="@color/setting_text_black"
+            android:textSize="20sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/manual_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="元"
+            android:textColor="@color/setting_text"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/manual_calls_remain_et"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/manual_unit"
+            android:background="@drawable/telnumber"
+            android:gravity="left|center_vertical"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:numeric="decimal"
+            android:textColor="@color/setting_text" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/manual_code_warn_rl"
+        android:layout_width="277dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/set_biglist_bar"
+        android:focusable="true" >
+	
+        <TextView
+            android:id="@+id/manual_code_string1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="有如下可能："
+            android:textColor="@color/setting_text_black"
+            android:textSize="16sp" >
+        </TextView>
+        
+        <TextView
+            android:id="@+id/manual_code_string2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/code_string"
+            android:textColor="@color/setting_text_black"
+            android:layout_below="@id/manual_code_string1"
+            android:textSize="15sp" >
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/manual_code_rl"
+        android:layout_width="277dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="3dp"
+        android:background="@drawable/set_biglist_bar"
+        android:focusable="true" >
+
+        <TextView
+            android:id="@+id/manual_code_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="短信指令校正"
+            android:textColor="@color/setting_text_black"
+            android:textSize="20sp" >
+        </TextView>
+
+        <ImageView
+            android:id="@+id/manual_code_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/arrow_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp" >
+
+        <Button
+            android:id="@+id/manual_cancel_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="取   消"
+            android:visibility="gone"
+            android:textColor="@drawable/init_settingbtn_selector"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/manual_confirm_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="确   定"
+            android:textColor="@drawable/init_settingbtn_selector"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="warm_tip">温馨提示</string>
+    <string name="tip1">该操作可能影响程序下列功能：</string>
+	<string name="tip2">   1.自动更新</string>
+	<string name="tip3">   2.后台联网</string>
+	<string name="tip4">   3.加载联网广告等</string>
+	<string name="tip5">以后不再提示。</string>
+	<string name="confirm_ask">您确定禁用该程序2G/3G联网吗？</string>
+	<string name="confirm">确定</string>
+	<string name="cancel">取消</string>
+    
+</resources>

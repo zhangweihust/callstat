@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.archermind.callstat.home.views.CustomTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/maininfo_color" >
+
+    <RelativeLayout
+        android:id="@+id/home_main_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tabhost_widget_bg" >
+        </TabWidget>
+    </RelativeLayout>
+
+</com.archermind.callstat.home.views.CustomTabHost>

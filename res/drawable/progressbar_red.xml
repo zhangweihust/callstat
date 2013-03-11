@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 进度条背景槽的颜色 -->
+	<item android:id="@android:id/background">
+		<!-- 定义形状 -->
+		<shape>
+			<!-- 设置圆角 -->
+			<corners android:radius = "5dp"/>
+			<!-- 设置渐变 startColor开始颜色； endColor结束颜色； angle表示角度，等于0时从左到
+			右渐变 ，然后逆时针旋转，等于90时候是从下到上-->
+			<gradient 
+				android:startColor="#FF0000"
+				android:centerColor="#FF0000"
+				android:centerY="0.5"
+				android:endColor="#FF0000"
+				android:angle="180"
+				/>
+		</shape>
+	</item>
+	
+	<item android:id="@android:id/secondaryProgress">
+		<clip>
+			<shape>
+				<corners android:radius="5dp"/>
+				<gradient 
+					android:startColor="#00FF00"
+					android:centerColor="#0000FF"
+					android:centerY="0.1"
+					android:angle="180"
+					/>
+			</shape>
+		</clip>
+	</item>
+	
+	<item android:id="@android:id/progress">
+		<clip>
+			<shape>
+				<corners android:radius="5dp" />
+				<gradient
+					android:startColor="#FFFFFF"
+					android:endColor="#FFFFFF"
+					android:angle="180"
+					/>
+			</shape>
+		</clip>
+	</item>
+</layer-list>

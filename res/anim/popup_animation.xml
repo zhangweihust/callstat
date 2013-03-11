@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/fade_in_menubox</item>  
+        <item name="android:windowExitAnimation">@anim/fade_out_menubox</item>   
+    </style>
+</resources>

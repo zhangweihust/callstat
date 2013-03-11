@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.archermind.callstat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D7DFEE" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/privacy_title"
+        android:textColor="#1e7bce"
+        android:textSize="20sp" />
+
+    <!-- 文字部分 -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="15dp"
+        android:fadingEdge="none" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#3D566D"
+            android:text="@string/privacy_content" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" >
+
+        <Button
+            android:id="@+id/no_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_topup_selector"
+            android:text="关闭并返回"
+            android:textColor="@drawable/init_settingbtn_selector"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/yes_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_topup_selector"
+            android:text="同意并使用"
+            android:textColor="@drawable/init_settingbtn_selector"
+            android:textSize="18sp" />
+        
+         <Button
+            android:id="@+id/back_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_topup_selector"
+            android:text="返  回"
+            android:textColor="@drawable/init_settingbtn_selector"
+            android:textSize="18sp" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, CallStatHomeActivity!</string>
+    <string name="title_go_back">返回</string>
+     <string name="title_commit">提交</string>
+     <string name="title_modify">修改</string>
+     <string name="title_cancel">取消</string>
+     <string name="title_replace">更换</string>
+    <string name="detailexpend">详细消费</string>
+    <string name="callstr">通话</string>
+    <string name="smsstr">短信</string>
+    <string name="gprsstr">流量</string>
+    <string name="errorstr">误差</string>
+    <string name="month_callstr">包月通话:</string>
+    <string name="month_smsstr">包月短信:</string>
+    <string name="month_gprsstr">包月流量:</string>
+    <string name="calloutstring">本月主叫：</string>
+    <string name="callinstring">本月被叫：</string>
+    <string name="sms_sendstring">已发短信：</string>
+    <string name="gprs_usestring">已用流量：</string>
+    <string name="lastcheck_str">上次对账：</string>
+    <string name="lastguess_str">上次预估：</string>
+    <string name="error_str">误差差额：</string>
+    <string name="account_time_str">对账时间：</string>
+    <string name="notification_title">AM话费通：</string>
+    <string name="have_no_spent">本月还未支出！</string>
+    <string name="month_used_string">本月已用</string>
+    <string name="day_used_string">今日已用</string>
+    <string name="pgdinner_string">套餐总量</string>
+    <string name="remianing_days_string">距月结日</string>
+    <string name="wifi_monthused_string">本月已用：</string>
+    <string name="wifi_dayused_string">今日已用：</string>
+    <string name="callnotice_setting_string">请拖动选择提示框位置</string>
+    <string name="call_warn_string">  </string>
+
+    <!-- 1.2新字段 -->
+
+    <string name="callsmanager_title_string">话费管家</string>
+    <string name="callsmanager_remain_string">账户余额(元)</string>
+    <string name="callsmanager_used_string">已用:</string>
+    <string name="callsmanager_budget_string">预算:</string>
+    <string name="callsmanager_budgetout_string">超出:</string>
+    <string name="callsmanager_used_info">本月话费使用情况:</string>
+    <string name="callsmanager_used_info_traffic">本月流量使用情况:</string>
+    <string name="callsmanager_day_in_month">日期:</string>
+    <string name="callsmanager_spent">消费:</string>
+    <string name="trafficmanager_title_string">流量管家</string>
+    <string name="trafficmanager_remain_string">流量剩余(MB)</string>
+    <string name="trafficmanager_beyond_string">流量超出(MB)</string>
+    <string name="trafficmanager_used_string">已用:</string>
+    <string name="trafficmanager_budget_string">套餐:</string>
+    <string name="trafficmanager_renain_string">流量剩余:</string>
+    <!-- 话费校正 -->
+    <string name="calls_check_title">校正话费</string>
+    <string name="check_automatic">自动校正</string>
+    <string name="check_from_operator">向运营商查询</string>
+    <string name="hand_input">手动输入数据</string>
+    <string name="check_automatic_prompt">自动校正已启用，每4小时校正话费数据。</string>
+
+    <!-- 流量校正 -->
+    <string name="traffic_check_title">校正流量</string>
+    <string name="traffic_autocheck_prompt">自动查询已启用，每4小时校正流量数据。</string>
+    <!-- 话费详单 -->
+    <string name="calldetails_title_string">话费详单</string>
+    <string name="calldetails_string0">本月已用话费：</string>
+    <string name="calldetails_string1">已用信息</string>
+    <string name="calldetails_string2">短信</string>
+    <string name="calldetails_string3">余额信息</string>
+    <string name="calldetails_local_calltime_string">本地通话：</string>
+    <string name="calldetails_sms_string">短信资费：</string>
+    <string name="calldetails_smssend_string">已发短信：</string>
+    <string name="calldetails_nativecall_string">本地通话：</string>
+    <string name="calldetails_distancecall_string">长途通话：</string>
+    <string name="calldetails_roamcall_string">漫游通话：</string>
+    <string name="calldetails_rent_string">套餐月租：</string>
+    <string name="calldetails_distancecall_string1">上次对账：</string>
+    <string name="calldetails_distancecall_string2">上次预估：</string>
+    <string name="calldetails_distancecall_string3">误差差额：</string>
+    <string name="calldetails_callsunit">元</string>
+    <!-- 初始化界面 -->
+    <string name="phonenumber_et_string">请输入您的手机号码，享受尊享服务。我们会保护好您的隐私信息。如果想清除软件保存的所有用户信息，请在设置里关闭尊享服务即可。</string>
+    <string name="phonenuber_setting_string">请输入手机号码</string>
+    <string name="brand_setting_string">请选择服务品牌</string>
+
+    <!-- 隐私与服务 -->
+    <string name="privacy_title">话费管家软件隐私及服务条款</string>
+  <string name="privacy_content">适应范围
+\n本隐私保护规则适用于使用诚迈科技（南京）有限公司（以下简称“诚迈科技”）拥有的话费管家（acall.archermind.com）的使用人（以下简称“用户”），除此之外的其他单位和个人不在本隐私保护规则的保护范围之内。 
+\n\n隐私保护原则
+\n话费管家及本公司保证不对外公开或向第三方提供用户的资料及用户在使用网络服务时存储在话费管家客户端和服务器上非公开内容。
+\n\n服务条款
+\n话费管家为您提供的服务价值
+\n通过监控和统计GPRS/3G/WiFi流量的使用情况，让您实时把握流量当前状态，从而防止由于流量使用超标造成不必要的话费损失。
+\n话费管家涉及的行为描述
+\n为保证流量统计的实时性与准确性，会通过手机系统接口检测流量使用量并记录，并且对这些记录信息进行一定分类和计算，最终以最清晰直观的方式展现给您。
+\n流量统计：该功能会通过手机系统接口调用流量数据，让您清晰了解到当前的流量使用与剩余情况，本过程在手机本地进行，不涉及任何上传行为。
+\n流量排行榜：该功能会向您展示手机中软件上传与下载数据分别消耗了多少流量，帮您轻松提示流量消耗情况，本过程在手机本地进行，不涉及任何上传行为。
+\n流量防火墙：该功能由用户主动操作，通过修改系统接口配置，限制目标软件的联网行为，用户可以根据自己的具体环境和个性化需求来设置每一个软件能否联网，
+  达到合理分配与节约流量的目的。在您的主动选择情况下，话费管家会对某个软件的联网行为进行禁用，目的是为您尽可能节约流量或警示流量使用异常的软件。
+\n因为基于手机本地流量统计会与运营商结算数据存在一定偏差，我们提供了自动校准功能为您同步运营商当前的统计数据，用来帮助您进一步精准地把握流量消耗。
+自动校准是通过向运营商发送免费查询短信，并将其回复的短信查询结果进行本地数据计算和解析，最终将流量的使用量或剩余量数值进行展示，
+让您一目了然的查看到运营商当前的流量情况。该过程需要根据您所设置的运营商、手机品牌、省份和城市来联网更新数据计算和解析模板、
+通过对应的模板将运营商回复短信内容进行计算和解析。同时我们还提供了手动校准功能，用户通过快捷按钮，向运营商发送查询短信并由软件自动处理。
+为了保证数据安全，诚迈科技会对启用尊享服务的用户联网数据传输采用严密的安全措施，并且手机IMSI仅作为区分不同设备的标示，
+不会与您的其他任何个人信息进行匹配存储。尊享服务用户可以随时停用尊享服务并自动清除所云端数据。短信所需费用均采用运营商标准资费，其中全国大部分省份和地区为免费。
+\n\n隐私保护的例外条款:
+\n1、话费管家及本公司承诺对用户资料采取对外保密措施，不向第三方披露用户资料，不授权第三方使用用户资料，除非：
+\n（1）依据本协议条款或者用户与话费管家以及本公司之间其他服务协议、合同、在线条款等规定可以提供；
+\n（2）依据法律法规的规定应当提供；
+\n（3）行政、司法等职权部门要求本公司提供；
+\n（4）用户同意话费管家或本公司向第三方提供； 
+\n（5）话费管家或本公司解决举报事件、提起诉讼或仲裁而提交的； 
+\n（6）话费管家或本公司为防止严重违法行为或涉嫌犯罪行为发生而采取必要合理行动所必须提交的；
+\n（7）话费管家或本公司为向用户提供产品、服务、信息而向第三方提供的，包括话费管家通过第三方的技术及服务向用户提供产品、服务、信息的情况。
+\n（8）话费管家或本公司为维护其合法权益。
+\n2、话费管家以及本公司可能会与第三方合作向用户提供相关的服务，在此情况下，如该第三方同意承担与话费管家同等的保护用户隐私的责任，则话费管家有权将用户的资料等提供给该第三方。
+\n3、在不透露单个用户隐私资料的前提下，话费管家以及本公司（包括子公司和关联企业）有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。
+\n4、话费管家以及本公司提供的网络服务中包含的任何文本、图片、图形、音频和/或视频资料均受版权、商标和/或其它财产所有权法律的保护，未经相关权利人同意，
+上述资料均不得在任何媒体直接或间接发布、播放、出于播放或发布目的而改写或再发行，或者被用于其他任何商业目的。所有这些资料或资料的任何部分仅可作为私人
+和非商业用途而保存在某台计算机内。诚迈科技不就由上述资料产生或在传送或递交全部或部分上述资料过程中产生的延误、不准确、错误和遗漏或从中产生或由此产生
+的任何损害赔偿，以任何形式，向用户或任何第三方负责。
+\n5、话费管家以及本公司提供网络服务而使用的任何软件（包括但不限于软件中所含的任何图象、照片、动画、录像、录音、音乐、文字和附加程序、随附的帮助材料）
+的一切权利均属于该软件的著作权人，未经该软件的著作权人许可，用户不得对该软件进行反向工程（reverse engineer）、反向编译（decompile）或反汇编（disassemble）。
+\n6、话费管家以及本公司提供内容及服务均来自第三方开放平台（电信、移动、联通），由于第三方开放平台的更变所来带的客户体验影响，话费管家以及本公司不承担任何责任。
+\n\n免责条款
+\n本公司仅按现有技术提供相应的安全措施来使本公司掌握的信息不丢失，不被滥用和变造。这些安全措施包括向其它服务器备份数据和对用户密码加密。尽管有这些安全措施，
+但本公司不保证这些信息的绝对安全。下列情况本公司亦不承担任何责任：
+\n1、由于您将用户密码告知他人或与他人共享注册帐户，由此导致的任何个人资料泄露。
+\n2、由于黑客攻击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营之不可抗力而造成的个人资料泄露、丢失、被盗用或被篡改等。
+\n3、与本公司链接的其它公司所造成之个人资料泄露及由此而导致的任何法律争议和后果。
+\n\n其他规定
+\n1、用户声明：在使用本公司各项服务前，已仔细阅读并透彻理解本《隐私保护规则》以及《诚迈科技服务协议》的内容。若用户使用本公司平台，则用户的使用
+ 行为将被视为对上述协议或规则的全部内容的认可。
+\n2、本公司可能不时按照用户的意见和本公司的需要修改本隐私权保护规则，以准确地反映本公司的资料收集及披露惯例。本规则的所有修改在网站公布有关修改通知后立即生效。
+\n3、本隐私保护规则就用户隐私保护未约定的，以《诚迈科技服务协议》的约定为准。</string>
+
+   <string name="correct_account_faile">尊敬的用户，系统检测到您的对帐短拦截失败，可能是由于以下原因导致:
+\n1.360等管理软件的一键清理功能把话费管家进程杀死了；
+\n2.360等管理软件设置了短信黑名单包含10086（最后号码是智能调节的）；
+\n3.Youni短信等软件将对帐短信优先拦截了；
+\n4.您的对帐指令库需要更新，请进入话费管家-设置，点击联网更新，提示成功后再尝试对帐;
+\n请按以上提示进行操作，确保对帐成功，才能更好地为您服务。
+</string>
+
+ <string name="correct_account_faile_miui">尊敬的用户，系统检测到您的对帐短拦截失败，可能是由于以下原因导致:
+\n1.您的系统是MIUIv4，请进入系统短信界面-点击菜单键-设置，将系统短信优先关闭;
+\n2.360等管理软件的一键清理功能把话费管家进程杀死了;
+\n3.360等管理软件设置的短信黑名单包含运营商号码（例如10086）;
+\n4.Youni短信等软件将对帐短信优先拦截了;
+\n5.您的对帐指令库需要更新，请进入话费管家-设置，点击联网更新，提示成功后再尝试对帐;
+\n请按以上提示进行操作，确保对帐成功，才能更好地为您服务。
+</string>
+<string name="code_string">1.运营商尚未回复查询请求，请等待\n2.第三方软件拦截了运营商的回复短信\n3.查询指令有误，您可以选择指令校正</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="warningstr">当前余额充足，请放心使用！</string>
+    <string name="traffic_warningstr">当前流量充足，请放心使用！</string>
+    <string name="feestitle">话费管家</string>
+    <string name="inforemationtitle">信息设置</string>
+    <string name="phonenumber">手机号</string>
+    <string name="province">省份</string>
+    <string name="city">城市</string>
+    <string name="operator">运营商</string>
+    <string name="brand">品牌</string>
+    <string name="advice">建议进行详细设置，以获得更多话费信息！</string>
+    <string name="basic_information">基本信息</string>
+    <string name="detail_information">详细信息</string>
+    <string name="detail_settings">详细设置</string>
+    <string name="start_using">开始使用</string>
+    <string name="phone_inquiries">电话查询</string>
+    <string name="phone_behind">****</string>
+    <string name="menu_help">使用帮助</string>
+    <!-- 详细设置字段 -->
+    <string name="month_calltime">包月通话</string>
+    <string name="month_callunit">分钟/月</string>
+    <string name="month_smscount">包月短信</string>
+    <string name="month_smscountunit">条/月</string>
+    <string name="month_traffic">包月流量</string>
+    <string name="month_trafficunit">MB/月</string>
+    <string name="msg_unitprice">短信单价</string>
+    <string name="msg_unit">元/条</string>
+    <string name="month_steadyfee">固定扣费</string>
+    <string name="month_steadyfeeunit">元/月</string>
+    <string name="phonenumber_ofseven">请输入号码前七位</string>
+    <string name="select_province">请选择省份</string>
+    <string name="select_city">请选择城市</string>
+    <string name="select_operator">请选择运营商</string>
+    <string name="select_brand">请选择品牌</string>
+    <string name="advice_info">请进行详细设置，以获得更多话费使用信息！</string>
+    <string name="advice_info_formore">建议设置，以确保计算准确性！</string>
+    <string name="location">所在地</string>
+	
+     <!-- 校正用量 -->
+	<string name="rectify_settings">校正用量</string>
+	<string name="rectify_callout_string">本月主叫</string>
+	<string name="rectify_callin_string">本月被叫</string>
+	<string name="rectify_sms_string">已发短信</string>
+	<string name="rectify_gprs_string">已用流量</string>
+	<string name="rectify_minute">分钟</string>
+	<string name="rectify_smscount">条</string>
+	<string name="rectify_mb">MB</string>
+	<string name="rectify_warnning_string">请点击修改，校正您的用量！</string>
+	<string name="rectify_commit">确     定</string>
+	<string name="rectify_cancel">取     消</string>
+	<string name="rectify_close">关闭网络</string>
+	<string name="rectify_continue">继续开启</string>
+</resources>

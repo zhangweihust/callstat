@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crash_report">发 送</string>
+    <string name="crash_exit">退 出</string>
+    <string name="crash_email_subject">崩溃报告</string>
+    <string name="crash_email_text">请您在下面写上评论:\n</string>
+    <string name="crash_dialog_title">抱歉！</string>
+    <string name="crash_dialog_text">未知的意外导致了程序出错 ，请您协助我们修复这个问题 。通过点击发送按钮将程序错误的信息发送给我们，谢谢！</string>
+    <string name="report_url">http://acall.archermind.com/ci/index.php/callstats/getcrash</string>
+    <string name="button_restart">重启程序</string>
+</resources>

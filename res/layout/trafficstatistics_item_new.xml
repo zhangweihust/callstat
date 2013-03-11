@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/res"
+    android:layout_width="fill_parent"
+    android:layout_height="59dip"
+    android:background="@drawable/new_deep"
+    android:minHeight="59dip"
+    android:scrollbarStyle="insideOverlay"
+    android:padding="0dp"
+    android:focusable="false"
+    android:descendantFocusability="blocksDescendants"
+     >
+
+    <!-- 最左边显示程序图片的控件 -->
+
+    <ImageView
+        android:id="@+id/programIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        />
+
+    <RelativeLayout
+        android:id="@+id/linear01"
+        android:layout_width="155dp"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/programIcon"
+        android:orientation="vertical" >
+
+        <!-- 程序名字 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/programName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="UC浏览器"
+                    android:textColor="@color/setting_text_black"
+                    android:textSize="16sp"
+                    android:singleLine="true"
+                     android:marqueeRepeatLimit="marquee_forever"/>
+
+                <!-- 最右边显示流量总数的控件 -->
+                <!--
+
+                <TextView
+                    android:id="@+id/totalTraffic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="0.99MB"
+                    android:textColor="@color/setting_text"
+                    android:textSize="14sp" 
+                    android:layout_gravity="right"
+                    />
+            -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_marginTop="3dp" >
+
+                <ImageView
+                    android:id="@+id/uploadIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/g2g3" />
+
+                <TextView
+                    android:id="@+id/uploadTraffic"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:text="12.2MB"
+                    android:textColor="@color/setting_text"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/downloadIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/wifi" />
+
+                <TextView
+                    android:id="@+id/downloadTraffic"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:text="13.3MB"
+                    android:textColor="@color/setting_text"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/linear01"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:gravity="right|center_vertical" >
+
+        <Button
+            android:id="@+id/is_2g"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_1"
+             />
+        
+        <Button
+            android:id="@+id/is_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/is_2g"
+            
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/button_1"
+             />
+
+        
+    </RelativeLayout>
+    
+<!--  
+    <RelativeLayout
+        android:id="@+id/firewall_item_slider_rl"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/firewall_item_on" >
+
+        <ImageView
+            android:id="@+id/firewall_item_slider_img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/botton02"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/firewall_item_slider_img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/botton02" 
+            />
+
+    </RelativeLayout>
+-->
+</RelativeLayout>

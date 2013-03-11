@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_bj2"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/popup_tetle_bj"
+        android:padding="0dp" >
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="请输入查询话费指令"
+            android:textColor="@color/setting_text_black"
+            android:textSize="16dp" />
+    </LinearLayout>
+<!--  
+    <LinearLayout
+        android:id="@+id/linearLayout_focus"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+-->
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="240dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/telnumber"
+        android:textColor="@color/setting_text"
+        android:focusable="true"
+        android:cursorVisible="false"
+        android:maxLength="8" />
+
+    <LinearLayout
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/popup_line" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="取   消"
+            android:textColor="@color/setting_text"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="确   定"
+            android:textColor="@color/setting_text"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

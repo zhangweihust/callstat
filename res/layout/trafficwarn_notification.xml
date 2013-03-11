@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/notification_bground"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <ImageView
+        android:id="@+id/nf_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/new_icon" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/nf_icon" >
+
+
+            <TextView
+                android:id="@+id/notification_trafficwarn"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:text="本日已用流量超出限额,请谨慎使用!"
+                android:textColor="#A98030"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="2dp"
+                android:gravity="center"
+                android:text="建议点击进入防火墙关闭GPRS网络。"
+                android:textColor="@color/darkgray"
+                android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

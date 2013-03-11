@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">话费管家</string>
+    <string name="exit_app_ensure">您确定要退出程序吗？</string>
+    <string name="callstat_ok">确定</string>
+    <string name="retry">重试</string>
+    <string name="connect_error">连接失败</string>
+    <string name="callstat_cancel">取消</string>
+    <string name="callstat_back">返回</string>
+    <string name="download_cancel">取消更新</string>
+    <string name="download_hide">后台下载</string>
+    <string name="request_update_url">http://acall.archermind.com/callstats_verinfo.cfg</string>
+    <string name="found_new_version">话费通新版发布啦，开始抢先体验吧！</string>
+    <string name="found_new_version_force">话费通有重大更新，需要立刻升级！</string>
+    <string name="never_ask_next_time">不再提醒</string>
+    <string name="share_me">告诉你一个简单又智能的话费和流量管理软件哦！#话费管家#，~话费和流量，即时掌控。赶快去这里下载吧：http://acall.archermind.com</string>
+    <string name="update_now">立即升级</string>
+    <string name="update_later">下次再说</string>
+    <string name="reconciliation_failed_url">http://acall.archermind.com/ci/index.php/callstats/getUserCheckMsg</string>
+    <string name="tel_to_area_file_path">/data/data/com.archermind.callstat/databases/</string>
+    <string name="feedback_url">http://acall.archermind.com/ci/index.php/callstats/getfeedback</string>
+    <string name="user_stats_url">http://acall.archermind.com/ci/index.php/callstats/getUserInfo</string>
+    <string name="user_process_url">http://acall.archermind.com/ci/index.php/callstats/getUsageInfo</string>
+    <string name="accounting_database_update_url">http://acall.archermind.com/callstats_accounting_code.cfg</string>
+    <string name="new_accounting_database_update_url">http://acall.archermind.com/ci/index.php/callstats/getAllKeyWord</string>
+	<string name="accounting_log_url">http://acall.archermind.com/ci/index.php/callstats/getAccountLog</string>
+	<string name="copy_right">2012诚迈科技 版权所有</string>
+	<string name="sina_weibo">http://e.weibo.com/2964646690/yFE4Fbbln</string>
+	<string name="tencent_weibo">http://t.qq.com/p/t/121888047763728</string>
+	<string name="our_net">http://acall.archermind.com/</string>
+	<string name="sms_verify_req_url">http://acall.archermind.com/ci/index.php/SMSUtils/sendSMS</string>
+	<string name="sms_verify_url">http://acall.archermind.com/ci/index.php/SMSUtils/checkSMS</string>
+	<string name="bind_phone_url">http://acall.archermind.com/ci/index.php/callstats/phonebind</string>
+	<string name="unbind_phone_url">http://acall.archermind.com/ci/index.php/callstats/phoneunbind</string>
+	<string name="sms_match_rule_url">http://acall.archermind.com/callstats_delimiter.cfg</string>
+	<string name="update_code_url">http://acall.archermind.com/ci/index.php/callstats/updateCode</string>
+	<string name="update_code_by_config_url">http://acall.archermind.com/ci/index.php/callstats/getKeyWordbySomeinfo</string>
+	<string name="chargeOnline_url">http://zc.m.taobao.com/</string>
+	<string name="userMonthlyConsume_url">http://acall.archermind.com/ci/index.php/callstats/insertclientConsumption</string>
+	<string name="update_code_by_city_url">http://acall.archermind.com/ci/index.php/callstats/getKeyWordbycityandbrand</string>
+	<string name="upload_code_by_city_url">http://acall.archermind.com/ci/index.php/callstats/updateCodebyCity</string>
+	    
+</resources>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/callCheck_title"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/top_border">
+
+        <RelativeLayout
+            android:id="@+id/callCheck_rl"
+			style="@style/TitleStyle"
+			android:background="@drawable/title_selector">
+
+            <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_go_back" />           
+            
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/callCheck_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/calls_check_title"
+            android:textColor="#FFFFFE"
+            android:textSize="23sp" />
+    </RelativeLayout>
+
+    <!-- 自动校正 -->
+
+    <RelativeLayout
+        android:id="@+id/calls_check_automatic_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/set_biglist_bar"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/calls_check_automatic_string1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_automatic"
+                android:textColor="#4f6486"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/calls_check_automatic_warn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/check_automatic_prompt"
+                android:textColor="#5379b9"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 向运营商查询 -->
+
+    <RelativeLayout
+        android:id="@+id/check_from_operator_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/set_biglist_bar"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/calls_check_automatic_string2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/check_from_operator"
+                android:textColor="#4f6486"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/check_time_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="上次查询:4小时前"
+                android:textColor="#5379b9"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 手动输入数据 -->
+
+    <RelativeLayout
+        android:id="@+id/hand_input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/set_biglist_bar"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/calls_check_automatic_string3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hand_input"
+                android:textColor="#4f6486"
+                android:textSize="18sp" />
+
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

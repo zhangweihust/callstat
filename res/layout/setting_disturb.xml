@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg" >
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/top_border"
+         >
+
+        <RelativeLayout
+            android:id="@+id/disturb_back_rl"
+			style="@style/TitleStyle">
+            
+            <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_go_back" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/disturb_back_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feestitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="防辐射"
+            android:textColor="@color/white"
+            android:textSize="20sp" 
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_layout"
+        
+        android:orientation="vertical"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/disturb_on_off_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/set_biglist_bar" >
+
+            <TextView
+                android:id="@+id/disturb_on_off_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_centerVertical="true"
+                android:text="开启防辐射"
+                android:textColor="@color/setting_text_black"
+                android:textSize="18sp" />
+            
+            <RelativeLayout
+                android:id="@+id/slider_rl"
+                android:layout_width="89dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/yqy_setting" >
+
+                <ImageView
+                    android:id="@+id/slider_img_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/botton02" />
+                <ImageView
+                    android:id="@+id/slider_img_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/botton02" />
+            </RelativeLayout>
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/disturb_off_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/set_biglist_bar" >
+
+            <TextView
+                android:id="@+id/disturb_off_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="关闭所有无线设备"
+                android:textColor="@color/setting_text_black"
+                android:textSize="18sp" />
+            
+            <TextView
+                android:id="@+id/disturb_off_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/setting_text"
+                android:text="22:00"
+                android:textSize="18sp" />
+
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/disturb_on_rl"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/set_biglist_bar" >
+
+            <TextView
+                android:id="@+id/disturb_on_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text="恢复所有无线设备"
+                android:textColor="@color/setting_text_black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/disturb_on_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:textColor="@color/setting_text"
+                android:text="9:00"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+       
+    </LinearLayout>
+
+</LinearLayout>

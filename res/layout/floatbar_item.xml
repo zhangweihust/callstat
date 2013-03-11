@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- float bar item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="wrap_content"
+	android:gravity="center" android:fadingEdge="none">
+	<TextView android:id="@+id/title_tv" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:gravity="center" 
+		android:textSize="16sp" android:typeface="sans" android:textColor="@drawable/tab_selector"/>
+</LinearLayout>

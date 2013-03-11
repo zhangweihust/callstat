@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AnimationPreview">
+		<item name="android:windowEnterAnimation">@anim/setting_popwindow_enter</item>
+		<item name="android:windowExitAnimation">@anim/setting_popwindow_exit</item>
+	</style>
+</resources>

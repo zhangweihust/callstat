@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:background="@drawable/popup_bj2"
+    android:orientation="vertical"
+    android:padding="3dp" >
+
+    <LinearLayout
+        android:layout_width="266dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/popup_tetle_bj"
+        android:padding="0dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="自动校正流量"
+            android:textColor="@color/setting_text_black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="265dp"
+            android:layout_height="59dp"
+            android:layout_toLeftOf="@+id/traffic_et" 
+            android:background="@drawable/new_biglist_selector"
+            android:layout_marginLeft="3dp">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="启用自动校正" 
+                android:textColor="@color/setting_text_black"
+            android:textSize="20sp"/>
+
+            <RelativeLayout
+        android:id="@+id/traffic_correct_slider_rl"
+        android:layout_width="89dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/yqy_setting" >
+
+        <ImageView
+            android:id="@+id/right_slider_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firewall_item_slider" 
+            />
+
+        <ImageView
+            android:id="@+id/left_slider_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/firewall_item_slider" 
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+        </RelativeLayout>
+       
+    <LinearLayout
+        android:id="@+id/edit_rl"
+        android:layout_width="265dp"
+        android:layout_height="95dp"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/set_biglist_bar"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+       >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="定期校正频率" 
+             android:textColor="@color/setting_text_black"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            />
+        
+        <LinearLayout 
+            android:id="@+id/freq_tv"
+            android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/choose_selector"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:padding="0dp"
+                >
+             <TextView
+                 android:id="@+id/frequencyTextView"
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:focusable="true"
+                android:text="每半天"
+                android:textColor="@color/setting_text"
+                android:textSize="17sp"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+   
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="取   消"
+            android:textColor="@color/setting_text"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/btn_topup_selector"
+            android:text="确   定"
+            android:textColor="@color/setting_text"
+            android:textSize="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

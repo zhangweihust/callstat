@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="account_frequency">
+        <item>每4小时</item>
+        <item>每8小时</item>
+        <item>每12小时</item>
+        <item>每24小时</item>
+    </string-array>
+<string-array name="account_content">
+    <item>查询余额</item>
+    <item>查询流量</item>
+</string-array>
+<string-array name="free_numbers">
+    <item >10086</item>
+    <item >11888</item>
+    <item >118114</item>
+    <item >10000</item>
+    <item >10001</item>
+    <item >10018</item>
+    <item >10011</item>
+    <item >10016</item>
+    <item >10019</item>
+    <item >10010</item>
+    <item >10050</item>
+    <item >13800138000</item>
+    <item >110</item>
+    <item >119</item>
+    <item >120</item>
+    <item >122</item>
+    <item >999</item>
+    <item >12395</item>
+    <item >95119</item>
+    <item >1008611</item>
+</string-array> 
+
+<string-array name="home_keywords">
+    <item >launcher</item>
+    <item >miui.home</item>
+</string-array>
+
+<string-array name="conflict_apps">
+    <item >com.qihoo360.mobilesafe</item>
+    <item >com.blovestorm</item>
+    <item >com.snda.youni</item>
+    <item >com.tencent.qqpimsecure</item>
+</string-array>
+    
+</resources>

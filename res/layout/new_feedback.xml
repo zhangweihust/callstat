@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/detail_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/top_border" >
+
+        <RelativeLayout
+            android:id="@+id/feedback_back_rl"
+			style="@style/TitleStyle"
+            android:background="@drawable/title_selector" >
+
+            <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_go_back" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_toRightOf="@+id/feedback_back_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feestitle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="反  馈"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/feedback_send_rl"
+			style="@style/TitleStyle"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/title_selector" >
+
+            <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_commit" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/title_line_right"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/feedback_send_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:orientation="vertical"
+        android:background="@drawable/set_biglist_bar" >
+
+        <EditText
+            android:id="@+id/feeddback_sugg_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/telnumber"
+            android:gravity="top" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    
+
+</LinearLayout>

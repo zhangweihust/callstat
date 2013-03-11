@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.archermind.callstat"
+    android:versionCode="21024"
+    android:versionName="2.0.21024" >
+
+    <uses-sdk android:minSdkVersion="7" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 悬浮窗口权限设置 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:icon="@drawable/new_icon"
+        android:killAfterRestore="false"
+        android:label="@string/app_name"
+        android:name=".CallStatApplication"
+        android:persistent="true" >
+        <activity
+            android:label="@string/app_name"
+            android:name=".home.HomeLaunchActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name="BrowserActivity"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:name=".CrashReportDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:name="SmsSendErrorDialog"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.InitInfoSettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.DetailedSettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.UpdateExceptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.SecondInitInfoSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.NewInitInfoSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.CallsDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.CallStatMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.CallsManagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.TrafficManagerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.HomeGuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.HomeGuidePrivacyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".firewall.FirewallActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.HomeGuideActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".firewall.NewTrafficTopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.NewAboutUsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.NewFeedbackActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.OperatorsSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.PackageSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.CallsBudgetSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.PhoneNumberSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.CallsInputDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.TrafficInputDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".home.settings.AutoCorrectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:name=".firewall.TrafficTopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <!--
+            android:launchMode="singleTask"
+            android:taskAffinity="com.archermind.callstat.firewall"
+        -->
+
+        <receiver android:name=".CallStatReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="upload_acc_code_action" />
+            </intent-filter>
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.MEDIA_MOUNTED" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_REMOVED" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_EJECT" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_SCANNER_STARTED" >
+                </action>
+                <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" >
+                </action>
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".SmsReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".service.MonitorService" >
+        </service>
+        <service android:name=".service.CallStatSMSService" >
+        </service>
+
+        <activity
+            android:name=".firewall.NewTrafficTopActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".home.settings.SystemSettingNewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+
+        <service android:name=".service.CallStatAssistantService" >
+        </service>
+
+        <activity
+            android:name=".home.settings.ManuallyModifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:name=".home.settings.DisturbActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.CallsCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.TrafficCheckActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.IOSched" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.ModifyInputDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.AutoMoneyInputDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.TrafficWarningActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.TimePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.IsCancelVIPDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.ManuallyInputAfterFailedDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+        <activity
+            android:configChanges="orientation|keyboardHidden"
+            android:name=".home.settings.MessageCodeAdjustActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/myDialogTheme" >
+        </activity>
+    </application>
+
+</manifest>

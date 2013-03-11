@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/suggestion_title"
+        android:layout_width="fill_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/top_border" >
+
+        <RelativeLayout
+            android:id="@+id/back_rl"
+			style="@style/TitleStyle"
+            android:background="@drawable/title_selector" >
+
+           <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_cancel" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/back_rl"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/feestitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="手机运营商"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        
+                <RelativeLayout
+            android:id="@+id/modify"
+			style="@style/TitleStyle"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/title_selector" >
+           
+            <TextView
+                android:id="@+id/refresh_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="@string/title_modify" />
+        </RelativeLayout>
+        
+           <LinearLayout
+            android:id="@+id/title_line_left"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@id/modify"
+            android:background="@drawable/top_verticalbar"
+            android:padding="0dp" >
+            </LinearLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/item_title_bg"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textSize="13sp"
+                    android:text="号码归属地"
+                    android:textColor="@color/setting_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/set_biglist_bar"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:id="@+id/provincelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/choose_selector"
+                        android:gravity="center_vertical"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/province"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:focusable="true"
+                            android:text="省份"
+                            android:textColor="@color/setting_text"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/provincelayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="59dp"
+                    android:background="@drawable/set_biglist_bar"
+                    android:focusable="true" >
+
+                    <LinearLayout
+                        android:id="@+id/citylayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/choose_selector"
+                        android:gravity="center_vertical"
+                        android:padding="0dp" >
+
+                        <TextView
+                            android:id="@+id/city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:focusable="true"
+                            android:text="城市"
+                            android:textColor="@color/setting_text"
+                            android:textSize="17sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/item_title_bg"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="运营商"
+                    android:textSize="13sp"
+                    android:textColor="@color/setting_text" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/provincelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="59dp"
+                android:background="@drawable/set_biglist_bar"
+                android:focusable="true" >
+
+                <LinearLayout
+                    android:id="@+id/opertorlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/choose_selector"
+                    android:gravity="center_vertical"
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:id="@+id/opertor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:focusable="true"
+                        android:text="运营商"
+                        android:textColor="@color/setting_text"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@color/item_title_bg"
+                android:gravity="center_vertical"
+                android:padding="0dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="服务品牌"
+                    android:textSize="13sp"
+                    android:textColor="@color/setting_text" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/provincelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="59dp"
+                android:background="@drawable/set_biglist_bar"
+                android:focusable="true" >
+
+                <LinearLayout
+                    android:id="@+id/brandlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/choose_selector"
+                    android:gravity="center_vertical"
+                    android:padding="0dp" >
+
+                    <TextView
+                        android:id="@+id/brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:focusable="true"
+                        android:text="品牌"
+                        android:textColor="@color/setting_text"
+                        android:textSize="17sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
